@@ -1,0 +1,874 @@
+<!DOCTYPE html>
+<html lang="vi" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MinoIcon - Phần Mềm Tìm Kiếm & Tải 500,000+ Icon Đồ Hoạ Đỉnh Cao (Desktop .NET 8.0)</title>
+  <meta name="description" content="MinoIcon là phần mềm desktop native (.NET 8.0) tìm kiếm, đổi màu và tải hơn 500,000+ icon SVG, PNG, ICO qua 19+ phong cách (iOS, Fluent, 3D Office, Material, Nolan). Hỗ trợ kéo thả trực tiếp vào Figma, Photoshop.">
+  
+  <!-- Favicon -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%232563eb'><path d='M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5'/></svg>">
+  
+  <!-- CSS Stylesheet -->
+  <link rel="stylesheet" href="css/style.css?v=4">
+</head>
+<body>
+
+  <!-- Background Glow & Grid -->
+  <div class="bg-hero-glow"></div>
+
+  <!-- ==========================================================================
+       HEADER & NAVBAR
+       ========================================================================== -->
+  <header class="navbar-wrapper">
+    <div class="container navbar">
+      <a href="#" class="nav-brand">
+        <div class="logo-badge">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 2L2 7l10 5 10-5-10-5z"/>
+            <path d="M2 17l10 5 10-5"/>
+            <path d="M2 12l10 5 10-5"/>
+          </svg>
+        </div>
+        <span>MinoIcon</span>
+      </a>
+
+      <nav>
+        <ul class="nav-menu">
+          <li><a href="#features" class="nav-link">Tính năng</a></li>
+          <li><a href="#playground" class="nav-link">Kho Demo Icon</a></li>
+          <li><a href="#free-key" class="nav-link">Key Free</a></li>
+          <li><a href="#ecosystem" class="nav-link">Hệ sinh thái</a></li>
+          <li><a href="#download" class="nav-link">Tải phần mềm</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <!-- Theme Mode Toggle Button -->
+        <button class="theme-toggle-btn" id="themeToggleBtn" aria-label="Chuyển chế độ sáng / tối" title="Chuyển chế độ sáng / tối">
+          🌙
+        </button>
+
+        <!-- Donate Button -->
+        <button class="btn-donate-link trigger-donate-modal">
+          <span>☕ Ủng hộ tác giả</span>
+        </button>
+
+        <!-- Download Button -->
+        <a href="#download" class="btn-pill-primary trigger-download-modal">
+          <span>Tải v1.0 Miễn phí</span>
+        </a>
+      </div>
+
+      <!-- Hamburger Button (Mobile) -->
+      <button class="btn-hamburger" id="hamburgerBtn" aria-label="Mở menu">
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="4" y1="12" x2="20" y2="12"></line>
+          <line x1="4" y1="6" x2="20" y2="6"></line>
+          <line x1="4" y1="18" x2="20" y2="18"></line>
+        </svg>
+      </button>
+    </div>
+
+    <!-- Mobile Drawer -->
+    <div class="mobile-menu-drawer" id="mobileMenuDrawer">
+      <ul class="mobile-nav-list">
+        <li><a href="#features" class="mobile-nav-link">Tính năng</a></li>
+        <li><a href="#playground" class="mobile-nav-link">Kho Demo Icon</a></li>
+        <li><a href="#free-key" class="mobile-nav-link">Key Free</a></li>
+        <li><a href="#ecosystem" class="mobile-nav-link">Hệ sinh thái</a></li>
+        <li><a href="#download" class="mobile-nav-link">Tải phần mềm</a></li>
+      </ul>
+      <div class="mobile-nav-actions">
+        <button class="btn-donate-link trigger-donate-modal" style="width: 100%; justify-content: center; margin-bottom: 12px; padding: 0.75rem;">
+          <span>☕ Ủng hộ tác giả</span>
+        </button>
+        <a href="#download" class="btn-pill-primary trigger-download-modal" style="width: 100%; justify-content: center;">
+          <span>Tải v1.0 Miễn phí</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ==========================================================================
+       HERO SECTION (STYLE THEO SCREENSHOT 1)
+       ========================================================================== -->
+  <section class="hero-section bg-grid-pattern" id="hero">
+    <div class="container hero-grid">
+      
+      <!-- Left Content Column -->
+      <div class="hero-content">
+        <div class="badge-row">
+          <span class="pill-badge blue">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
+              <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
+            </svg>
+            Phần mềm Native C# .NET 8.0
+          </span>
+          <span class="pill-badge green">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/>
+            </svg>
+            500,000+ Icon • 19+ Styles
+          </span>
+        </div>
+
+        <h1 class="hero-title">
+          Kho Icon Đồ Hoạ Đỉnh Cao
+          <span class="highlight-blue">Tải & Tùy Biến Chỉ Với 1 Click</span>
+        </h1>
+
+        <p class="hero-description">
+          <strong>MinoIcon Desktop</strong> là phần mềm quản lý, tìm kiếm và xuất file icon siêu tốc. Tích hợp bảng đổi màu HSV thời gian thực, tải đa định dạng (SVG, PNG từ 16px đến 512px, ICO) và kéo thả trực tiếp vào Figma, Adobe Photoshop.
+        </p>
+
+        <div class="hero-cta-group">
+          <button class="btn-pill-primary trigger-download-modal">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+              <polyline points="7 10 12 15 17 10"/>
+              <line x1="12" y1="15" x2="12" y2="3"/>
+            </svg>
+            <span>Tải MinoIcon Desktop (.zip)</span>
+          </button>
+
+          <a href="#playground" class="btn-pill-secondary">
+            <span>Thử nghiệm Live Demo</span>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="5" y1="12" x2="19" y2="12"/>
+              <polyline points="12 5 19 12 12 19"/>
+            </svg>
+          </a>
+        </div>
+
+        <div class="hero-features-mini">
+          <div class="mini-feat-item">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10"/>
+              <circle cx="12" cy="12" r="4"/>
+            </svg>
+            <span>Đổi màu HSV #HEX</span>
+          </div>
+
+          <div class="mini-feat-item">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polygon points="12 2 2 7 12 12 22 7 12 2"/>
+            </svg>
+            <span>19+ Bộ Styles Đa Dạng</span>
+          </div>
+
+          <div class="mini-feat-item">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
+            </svg>
+            <span>Xuất SVG / PNG / ICO</span>
+          </div>
+
+          <div class="mini-feat-item">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
+            </svg>
+            <span>Miễn phí 100%</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right App Window Mockup -->
+      <div class="hero-mockup-wrapper">
+        <div class="hero-window-card">
+          <div class="window-header">
+            <div class="window-dots">
+              <span class="window-dot red"></span>
+              <span class="window-dot yellow"></span>
+              <span class="window-dot green"></span>
+            </div>
+            <span class="window-title">MINOICON DESKTOP • .NET 8.0</span>
+            <div style="width: 40px;"></div>
+          </div>
+
+          <div class="window-body-visual">
+            <div class="mockup-hub-container">
+              <!-- Connecting Curved Visual Lines -->
+              <svg class="hub-lines-svg" viewBox="0 0 440 320">
+                <path d="M60,45 C150,50 170,140 220,160" stroke="#bfdbfe" stroke-width="2" stroke-dasharray="4 4" fill="none"/>
+                <path d="M380,45 C300,50 270,140 220,160" stroke="#bfdbfe" stroke-width="2" stroke-dasharray="4 4" fill="none"/>
+                <path d="M40,160 C120,160 160,160 220,160" stroke="#93c5fd" stroke-width="2" fill="none"/>
+                <path d="M400,160 C320,160 280,160 220,160" stroke="#93c5fd" stroke-width="2" fill="none"/>
+                <path d="M75,275 C150,270 170,180 220,160" stroke="#bfdbfe" stroke-width="2" stroke-dasharray="4 4" fill="none"/>
+                <path d="M365,275 C300,270 270,180 220,160" stroke="#bfdbfe" stroke-width="2" stroke-dasharray="4 4" fill="none"/>
+              </svg>
+
+              <!-- Central Hub -->
+              <div class="central-hub-circle">
+                <svg width="46" height="46" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 2L2 7l10 5 10-5-10-5z"/>
+                  <path d="M2 17l10 5 10-5"/>
+                  <path d="M2 12l10 5 10-5"/>
+                </svg>
+              </div>
+
+              <!-- Floating Node 1 (iOS Outline) -->
+              <div class="floating-icon-card node-top-left">
+                <div class="icon-card-avatar" style="background: #EFF6FF; color: #2563EB;">📱</div>
+                <div>
+                  <div class="card-name">iOS Outline & Fill</div>
+                  <div class="card-sub">Apple HIG Design</div>
+                </div>
+              </div>
+
+              <!-- Floating Node 2 (Fluent Design) -->
+              <div class="floating-icon-card node-top-right">
+                <div class="icon-card-avatar" style="background: #E0F2FE; color: #0284C7;">🪟</div>
+                <div>
+                  <div class="card-name">Microsoft Fluent</div>
+                  <div class="card-sub">Windows 11 Style</div>
+                </div>
+              </div>
+
+              <!-- Floating Node 3 (Office 3D) -->
+              <div class="floating-icon-card node-mid-left">
+                <div class="icon-card-avatar" style="background: #FEF3C7; color: #D97706;">✨</div>
+                <div>
+                  <div class="card-name">Office 3D Pack</div>
+                  <div class="card-sub">Isometric Glossy</div>
+                </div>
+              </div>
+
+              <!-- Floating Node 4 (Nolan Gradient) -->
+              <div class="floating-icon-card node-mid-right">
+                <div class="icon-card-avatar" style="background: #EDE9FE; color: #7C3AED;">🎨</div>
+                <div>
+                  <div class="card-name">Nolan Gradient</div>
+                  <div class="card-sub">Vibrant Two-Tone</div>
+                </div>
+              </div>
+
+              <!-- Floating Node 5 (Material 3) -->
+              <div class="floating-icon-card node-bottom-left">
+                <div class="icon-card-avatar" style="background: #D1FAE5; color: #059669;">📐</div>
+                <div>
+                  <div class="card-name">Material Outlined</div>
+                  <div class="card-sub">Google Design System</div>
+                </div>
+              </div>
+
+              <!-- Floating Node 6 (Pastel & Dusk) -->
+              <div class="floating-icon-card node-bottom-right">
+                <div class="icon-card-avatar" style="background: #FCE7F3; color: #DB2777;">🍬</div>
+                <div>
+                  <div class="card-name">Pastel & Dusk</div>
+                  <div class="card-sub">Cute & Flat Colors</div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       TICKER CAROUSEL
+       ========================================================================== -->
+  <section class="hero-ticker-section">
+    <div class="ticker-track">
+      <div class="ticker-item-pill">✨ 500,000+ Vector Icons</div>
+      <div class="ticker-item-pill">🎨 Bảng chọn màu HSV Spectrum</div>
+      <div class="ticker-item-pill">🚀 Kéo thả trực tiếp Figma & Canva</div>
+      <div class="ticker-item-pill">📦 Tải định dạng SVG, PNG (16-512px), ICO</div>
+      <div class="ticker-item-pill">📁 Quản lý bộ sưu tập cá nhân (User Collections)</div>
+      <div class="ticker-item-pill">⚡ Socket Pooling & SharpVectors Render</div>
+      <div class="ticker-item-pill">🌙 Chế độ Dark Mode & Light Mode</div>
+      <div class="ticker-item-pill">🎉 Tác giả: Lê Phạm Minh Nhật</div>
+
+      <!-- Loop Duplicate -->
+      <div class="ticker-item-pill">✨ 500,000+ Vector Icons</div>
+      <div class="ticker-item-pill">🎨 Bảng chọn màu HSV Spectrum</div>
+      <div class="ticker-item-pill">🚀 Kéo thả trực tiếp Figma & Canva</div>
+      <div class="ticker-item-pill">📦 Tải định dạng SVG, PNG (16-512px), ICO</div>
+      <div class="ticker-item-pill">📁 Quản lý bộ sưu tập cá nhân (User Collections)</div>
+      <div class="ticker-item-pill">⚡ Socket Pooling & SharpVectors Render</div>
+      <div class="ticker-item-pill">🌙 Chế độ Dark Mode & Light Mode</div>
+      <div class="ticker-item-pill">🎉 Tác giả: Lê Phạm Minh Nhật</div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       INTERACTIVE ICON PLAYGROUND & REAL ENGINE SEARCH
+       ========================================================================== -->
+  <section class="playground-section" id="playground">
+    <div class="container">
+      <div class="section-header-center">
+        <span class="pill-badge purple">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10"/>
+            <polygon points="10 8 16 12 10 16 10 8"/>
+          </svg>
+          Trải nghiệm trực tiếp
+        </span>
+        <h2 class="section-title">Kho Icon Trực Tuyến Thời Gian Thực</h2>
+        <p class="section-subtitle">
+          Tìm kiếm từ kho 500,000+ icon qua đúng API của phần mềm MinoIcon. Bạn có thể đổi màu trực tiếp, sao chép SVG, JSX hoặc tải file PNG 96px ngay trên trình duyệt.
+        </p>
+      </div>
+
+      <div class="playground-card">
+        <div class="playground-toolbar">
+          <div class="toolbar-top-row">
+            <!-- Search Bar -->
+            <div class="search-input-box">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#94a3b8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="11" cy="11" r="8"/>
+                <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+              </svg>
+              <input type="text" id="iconSearchInput" placeholder="Tìm kiếm icon (vd: user, home, cloud, star, settings, heart)...">
+            </div>
+
+            <!-- Toolbar Controls: Style Dropdown & Live Color Picker -->
+            <div class="toolbar-controls-row">
+              <select id="styleSelectDropdown" class="style-selector-select" aria-label="Chọn Style Icon">
+                <option value="all">Tất cả Styles (All)</option>
+                <option value="ios7">iOS Outline</option>
+                <option value="ios_filled">iOS Filled</option>
+                <option value="fluent">Microsoft Fluent</option>
+                <option value="color">Color / Flat</option>
+                <option value="office40">Office 3D</option>
+                <option value="nolan">Nolan Gradient</option>
+                <option value="m_outlined">Material Outlined</option>
+                <option value="m_rounded">Material Rounded</option>
+                <option value="m_two_tone">Material Two Tone</option>
+                <option value="win11">Windows 11</option>
+                <option value="clouds">Clouds</option>
+                <option value="bubbles">Bubbles</option>
+                <option value="stickers">Stickers</option>
+                <option value="arcade">Arcade</option>
+                <option value="dusk">Dusk</option>
+                <option value="pastel">Pastel</option>
+              </select>
+
+              <div class="color-picker-control" title="Đổi màu cho các icon đơn sắc (Monochrome)">
+                <input type="color" id="recolorInput" value="#2563EB" class="color-input-bubble">
+                <span>Đổi màu Icon</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Quick Category Filters -->
+          <div class="filter-pills-row">
+            <button class="filter-btn active" data-filter="all">Tất cả (Popular)</button>
+            <button class="filter-btn" data-filter="interface">User Interface</button>
+            <button class="filter-btn" data-filter="security">Security & Privacy</button>
+            <button class="filter-btn" data-filter="business">Business & Finance</button>
+            <button class="filter-btn" data-filter="technology">Science & Tech</button>
+            <button class="filter-btn" data-filter="shopping">Shopping & Cart</button>
+            <button class="filter-btn" data-filter="music">Media & Music</button>
+            <button class="filter-btn" data-filter="settings">Settings & Tools</button>
+          </div>
+        </div>
+
+        <!-- Grid Container -->
+        <div class="icons-grid-container" id="iconsGridContainer">
+          <!-- Populated by JavaScript -->
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       FEATURE SHOWCASE SECTION (SPLIT SCREEN - STYLE THEO SCREENSHOT 2)
+       ========================================================================== -->
+  <section class="feature-showcase-section" id="features">
+    <div class="container">
+      <div class="section-header-center">
+        <span class="pill-badge blue">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+          </svg>
+          Giao diện & Tính năng
+        </span>
+        <h2 class="section-title">Trải nghiệm tìm kiếm & quản lý Icon cho Creator chuyên nghiệp</h2>
+        <p class="section-subtitle">
+          MinoIcon Desktop được tối ưu hóa toàn diện cho hệ điều hành Windows với công nghệ .NET 8.0, giúp thao tác kéo thả và tải file mượt mà chỉ trong chớp mắt.
+        </p>
+      </div>
+
+      <div class="feature-split-layout">
+        <!-- Left Features List -->
+        <div class="feature-col-text">
+          <div class="feature-badge-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <polygon points="12 2 2 7 12 12 22 7 12 2"/>
+              <polyline points="2 17 12 22 22 17"/>
+              <polyline points="2 12 12 17 22 12"/>
+            </svg>
+          </div>
+          
+          <h3 class="feature-col-title">Hộp Công Cụ Icon Hợp Nhất 19+ Styles</h3>
+          <p class="feature-col-desc">
+            Không cần phải mở hàng chục tab trình duyệt hay tìm kiếm icon rời rạc. MinoIcon tổng hợp tất cả bộ icon chuẩn thiết kế (iOS, Fluent, 3D Office, Material, Nolan, Pastel) trong một giao diện Dark/Light Mode sắc nét.
+          </p>
+
+          <ul class="feature-check-list">
+            <li class="check-item">
+              <div class="check-icon-circle">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="20 6 9 17 4 12"/>
+                </svg>
+              </div>
+              <span class="check-item-text"><strong>Bảng chọn màu HSV quang phổ</strong>: Đổi màu trực tiếp cho mọi icon đơn sắc theo mã #HEX hoặc thanh trượt màu sắc.</span>
+            </li>
+
+            <li class="check-item">
+              <div class="check-icon-circle">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="20 6 9 17 4 12"/>
+                </svg>
+              </div>
+              <span class="check-item-text"><strong>Xuất đa định dạng tùy chỉnh</strong>: Tải file SVG vector, PNG với kích thước từ 16px đến 512px+, hoặc định dạng ICO cho Windows.</span>
+            </li>
+
+            <li class="check-item">
+              <div class="check-icon-circle">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="20 6 9 17 4 12"/>
+                </svg>
+              </div>
+              <span class="check-item-text"><strong>Quản lý Bộ sưu tập (Collections)</strong>: Gom nhóm các icon yêu thích cho từng dự án, lưu trữ local an toàn.</span>
+            </li>
+
+            <li class="check-item">
+              <div class="check-icon-circle">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="20 6 9 17 4 12"/>
+                </svg>
+              </div>
+              <span class="check-item-text"><strong>Kéo thả 1-giây</strong>: Thả trực tiếp icon vào canvas Figma, Adobe Illustrator, Canva, Photoshop mà không cần lưu tạm.</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Right App Screenshot Container (Clean, only the screenshot itself) -->
+        <div class="feature-app-screenshot-clean">
+          <img id="appScreenshotImg" class="feature-screenshot-img" src="assets/user_images/minoicon_app_light.png" alt="MinoIcon Desktop App Screenshot" loading="lazy">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       KEY FREE SECTION (MODERN SAAS REDESIGN - PERFECTLY THEMED)
+       ========================================================================== -->
+  <section class="key-free-section" id="free-key">
+    <div class="container">
+      <div class="section-header-center">
+        <span class="pill-badge green">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
+            <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
+          </svg>
+          Giấy phép miễn phí • Tự động đổi mỗi tuần (7 ngày)
+        </span>
+        <h2 class="section-title">Khởi Động MinoIcon Hoàn Toàn Miễn Phí</h2>
+        <p class="section-subtitle">
+          Sao chép mã kích hoạt bên dưới và nhập vào phần mềm khi khởi động. Hoàn toàn miễn phí, không cần đăng ký tài khoản và đổi mới tự động mỗi tuần.
+        </p>
+      </div>
+
+      <!-- Main Dashboard Card -->
+      <div class="key-dashboard-card">
+        <div class="key-card-grid">
+          
+          <!-- Left Column: Key Terminal & Actions -->
+          <div class="key-generator-col">
+            <div class="key-status-bar">
+              <div class="key-status-chips">
+                <span class="key-chip-live">
+                  <span class="key-live-dot"></span>
+                  Đang hoạt động
+                </span>
+                <span class="key-chip-type">🔑 Offline License</span>
+              </div>
+
+              <div class="key-countdown-box">
+                <span>⏱️ Hết hạn sau:</span>
+                <span class="key-countdown-badge" id="keyCountdownVal">6 ngày 18:25:40</span>
+              </div>
+            </div>
+
+            <!-- Terminal Box -->
+            <div class="key-terminal-box">
+              <div class="key-label-row">
+                <span>MÃ KÍCH HOẠT MINOICON DESKTOP</span>
+                <span>V1.0.0</span>
+              </div>
+
+              <div class="key-value-wrapper">
+                <span class="key-code-display" id="keyCodeText">MINO-8899-VIP-2026</span>
+                <button class="btn-copy-key-saas" id="copyKeyBtn">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="9" y="9" width="13" height="13" rx="2" ry="2"/>
+                    <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/>
+                  </svg>
+                  Sao chép Key
+                </button>
+              </div>
+            </div>
+
+            <div class="key-meta-footer">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"/>
+                <polyline points="12 6 12 12 16 14"/>
+              </svg>
+              <span id="keyExpiryDateText">Hiệu lực đến 21/08/2026 • Đổi mỗi tuần (7 ngày) • Miễn phí 100% trọn đời</span>
+            </div>
+          </div>
+
+          <!-- Right Column: 4-Step Visual Guide -->
+          <div class="key-guide-col">
+            <h3 class="guide-col-title">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+              </svg>
+              Cách kích hoạt nhanh:
+            </h3>
+
+            <div class="guide-step-card">
+              <div class="step-num-badge">1</div>
+              <div class="step-content-text">
+                Nhấn nút <strong>Sao chép Key</strong> ở khung bên cạnh.
+              </div>
+            </div>
+
+            <div class="guide-step-card">
+              <div class="step-num-badge">2</div>
+              <div class="step-content-text">
+                Khởi chạy phần mềm <strong>MinoIcon Desktop</strong> trên máy tính.
+              </div>
+            </div>
+
+            <div class="guide-step-card">
+              <div class="step-num-badge">3</div>
+              <div class="step-content-text">
+                Dán mã key vào ô nhập (<strong>Ctrl + V</strong>) rồi bấm <strong>Xác nhận →</strong>.
+              </div>
+            </div>
+
+            <div class="guide-step-card">
+              <div class="step-num-badge">4</div>
+              <div class="step-content-text">
+                Sử dụng không giới hạn trong <strong>1 tuần (7 ngày)</strong>; sau đó quay lại trang này lấy key mới.
+              </div>
+            </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       ECOSYSTEM 4-CARDS GRID (STYLE THEO SCREENSHOT 3)
+       ========================================================================== -->
+  <section class="ecosystem-section" id="ecosystem">
+    <div class="container">
+      <div class="section-header-center">
+        <span class="pill-badge gray">Hệ Sinh Thái MinoIcon</span>
+        <h2 class="section-title">Bạn đã trang bị đầy đủ công cụ thiết kế chưa?</h2>
+        <p class="section-subtitle">
+          Giải pháp trọn gói từ MinoIcon giúp designer & developer xây dựng giao diện hoàn hảo, tối ưu hóa tốc độ xuất bản sản phẩm trên một nền tảng duy nhất.
+        </p>
+      </div>
+
+      <div class="ecosystem-grid">
+        <!-- Card 1: Desktop App -->
+        <div class="eco-card">
+          <div class="eco-icon-wrapper blue">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="2" y="3" width="20" height="14" rx="2" ry="2"/>
+              <line x1="8" y1="21" x2="16" y2="21"/>
+              <line x1="12" y1="17" x2="12" y2="21"/>
+            </svg>
+          </div>
+          <h3 class="eco-card-title">MinoIcon Desktop</h3>
+          <p class="eco-card-desc">
+            Phần mềm native .NET 8.0 cho Windows. Tìm kiếm siêu tốc, tự đổi màu theo mã HEX và tải trọn gói icon về thư mục tùy chọn.
+          </p>
+          <a href="#download" class="eco-card-link trigger-download-modal">
+            <span>Tải ngay</span>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="5" y1="12" x2="19" y2="12"/>
+              <polyline points="12 5 19 12 12 19"/>
+            </svg>
+          </a>
+        </div>
+
+        <!-- Card 2: User Collections -->
+        <div class="eco-card">
+          <div class="eco-icon-wrapper green">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/>
+            </svg>
+          </div>
+          <h3 class="eco-card-title">Bộ Sưu Tập Cá Nhân</h3>
+          <p class="eco-card-desc">
+            Tạo không giới hạn các thư mục sưu tập icon theo từng dự án thiết kế. Tự động lưu cấu hình và khôi phục khi mở lại app.
+          </p>
+          <a href="#download" class="eco-card-link trigger-download-modal">
+            <span>Tìm hiểu thêm</span>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="5" y1="12" x2="19" y2="12"/>
+              <polyline points="12 5 19 12 12 19"/>
+            </svg>
+          </a>
+        </div>
+
+        <!-- Card 3: Color Engine -->
+        <div class="eco-card">
+          <div class="eco-icon-wrapper orange">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10"/>
+              <path d="M12 2a10 10 0 0 1 0 20"/>
+            </svg>
+          </div>
+          <h3 class="eco-card-title">Bộ Chỉnh Màu HSV</h3>
+          <p class="eco-card-desc">
+            Hỗ trợ dải màu cầu vồng và bảng quang phổ độ bão hòa, tự động chuyển đổi mã màu HEX cho toàn bộ danh sách icon đang hiển thị.
+          </p>
+          <a href="#playground" class="eco-card-link">
+            <span>Thử đổi màu</span>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="5" y1="12" x2="19" y2="12"/>
+              <polyline points="12 5 19 12 12 19"/>
+            </svg>
+          </a>
+        </div>
+
+        <!-- Card 4: Multi-Format Converter -->
+        <div class="eco-card">
+          <div class="eco-icon-wrapper red">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/>
+            </svg>
+          </div>
+          <h3 class="eco-card-title">Chuyển Đổi Định Dạng</h3>
+          <p class="eco-card-desc">
+            Chuyển đổi tức thì từ Vector sang PNG độ phân giải cao hoặc tạo icon .ICO với header 32-bit cho ứng dụng Windows.
+          </p>
+          <a href="#download" class="eco-card-link trigger-download-modal">
+            <span>Tìm hiểu thêm</span>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="5" y1="12" x2="19" y2="12"/>
+              <polyline points="12 5 19 12 12 19"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       BOTTOM BLUE CTA BANNER (STYLE THEO SCREENSHOT 3 & 4)
+       ========================================================================== -->
+  <section class="bottom-cta-section" id="download">
+    <div class="container cta-inner">
+      <h2 class="cta-title">Sẵn sàng nâng tầm tốc độ thiết kế với MinoIcon?</h2>
+      <p class="cta-subtitle">
+        Tải ngay bản cài đặt MinoIcon Desktop v1.0 để khám phá và quản lý hơn 500,000+ icon đỉnh cao hoàn toàn miễn phí.
+      </p>
+
+      <div class="cta-buttons-group">
+        <button class="btn-cta-white trigger-download-modal">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+            <polyline points="7 10 12 15 17 10"/>
+            <line x1="12" y1="15" x2="12" y2="3"/>
+          </svg>
+          <span>Tải MinoIcon cho Windows (.zip)</span>
+        </button>
+
+        <div class="cta-stat-pill">
+          ⚡ Phiên bản Desktop v1.0.0 • Miễn phí trọn đời
+        </div>
+      </div>
+
+      <div class="cta-meta-text">
+        Yêu cầu: Windows 10/11 (64-bit) & .NET 8.0 Runtime<br>
+        <span style="opacity: 0.8; font-size: 0.8rem; margin-top: 4px; display: inline-block;">
+          Phát triển bởi Lê Phạm Minh Nhật • Bản quyền mở thương mại
+        </span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       FOOTER (STYLE THEO SCREENSHOT 4)
+       ========================================================================== -->
+  <footer class="footer-main">
+    <div class="container">
+      <div class="footer-grid">
+        
+        <!-- Brand Info -->
+        <div class="footer-brand-col">
+          <a href="#" class="nav-brand">
+            <div class="logo-badge">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 2L2 7l10 5 10-5-10-5z"/>
+                <path d="M2 17l10 5 10-5"/>
+                <path d="M2 12l10 5 10-5"/>
+              </svg>
+            </div>
+            <span>MINOICON.NET</span>
+          </a>
+
+          <p class="footer-desc">
+            <strong>MINOICON CREATIVE STUDIO</strong><br>
+            Phần mềm và giải pháp tìm kiếm, đổi màu, tải và đồng bộ tài nguyên vector icon đỉnh cao cho Designer & Developer.
+          </p>
+
+          <p class="footer-tax-info">
+            Tác giả: Lê Phạm Minh Nhật • License: MIT / Open Source
+          </p>
+
+          <div class="footer-social-links">
+            <button class="btn-donate-link trigger-donate-modal" style="font-size: 0.825rem; padding: 0.35rem 0.75rem;">
+              ☕ Ủng hộ tác giả
+            </button>
+          </div>
+        </div>
+
+        <!-- Col 2: Hệ Sinh Thái -->
+        <div>
+          <h4 class="footer-col-title">HỆ SINH THÁI</h4>
+          <ul class="footer-nav-list">
+            <li><a href="#download" class="footer-nav-link trigger-download-modal">› MinoIcon Desktop (.NET 8)</a></li>
+            <li><a href="#playground" class="footer-nav-link">› Kho Demo Icon 19+ Styles</a></li>
+            <li><a href="#features" class="footer-nav-link">› Bộ chuyển đổi SVG & PNG</a></li>
+            <li><a href="#features" class="footer-nav-link">› Bảng chọn màu HSV Spectrum</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Pháp Lý -->
+        <div>
+          <h4 class="footer-col-title">PHÁP LÝ & BẢN QUYỀN</h4>
+          <ul class="footer-nav-list">
+            <li><a href="#" class="footer-nav-link">Điều khoản sử dụng</a></li>
+            <li><a href="#" class="footer-nav-link">Chính sách bảo mật Local-First</a></li>
+            <li><a href="#" class="footer-nav-link">Giấy phép thương mại (Commercial)</a></li>
+            <li><a href="#" class="footer-nav-link">Bản quyền mã nguồn mở</a></li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom-bar">
+        <span>© 2026 MINOICON. All rights reserved.</span>
+        <span>Phần mềm được phát triển bởi Lê Phạm Minh Nhật.</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==========================================================================
+       FLOATING ACCESSORIES (BACK TO TOP)
+       ========================================================================== -->
+  <div class="floating-widgets-group">
+    <button class="btn-floating-top" id="backToTopBtn" aria-label="Cuộn lên đầu">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="12" y1="19" x2="12" y2="5"/>
+        <polyline points="5 12 12 5 19 12"/>
+      </svg>
+    </button>
+  </div>
+
+  <!-- ==========================================================================
+       DOWNLOAD MODAL (DESKTOP PACKAGE DOWNLOAD)
+       ========================================================================== -->
+  <div class="modal-overlay" id="downloadModal">
+    <div class="modal-card">
+      <button class="modal-close-btn" aria-label="Đóng">✕</button>
+      
+      <div style="text-align: center; margin-bottom: 1.5rem;">
+        <div class="logo-badge" style="margin: 0 auto 1rem auto; width: 50px; height: 50px;">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 2L2 7l10 5 10-5-10-5z"/>
+            <path d="M2 17l10 5 10-5"/>
+            <path d="M2 12l10 5 10-5"/>
+          </svg>
+        </div>
+        <h3 style="font-size: 1.5rem; font-weight: 800; color: var(--text-dark);">Tải Phần Mềm MinoIcon</h3>
+        <p style="font-size: 0.9rem; color: var(--text-muted); margin-top: 4px;">Bản chính thức v1.0.0 (Native C# .NET 8.0) • Miễn phí trọn đời</p>
+      </div>
+
+      <div class="os-selector-grid">
+        <div class="os-option-card selected" data-os="Windows">
+          <div style="font-size: 1.6rem; margin-bottom: 4px;">🪟</div>
+          <div style="font-weight: 700; font-size: 0.9rem; color: var(--text-dark);">Windows</div>
+          <div style="font-size: 0.75rem; color: var(--text-muted);">.zip Portable / .exe</div>
+        </div>
+
+        <div class="os-option-card" data-os="macOS">
+          <div style="font-size: 1.6rem; margin-bottom: 4px;">🍎</div>
+          <div style="font-weight: 700; font-size: 0.9rem; color: var(--text-dark);">macOS</div>
+          <div style="font-size: 0.75rem; color: var(--text-muted);">(Sắp ra mắt)</div>
+        </div>
+
+        <div class="os-option-card" data-os="Web Demo">
+          <div style="font-size: 1.6rem; margin-bottom: 4px;">🌐</div>
+          <div style="font-weight: 700; font-size: 0.9rem; color: var(--text-dark);">Web Demo</div>
+          <div style="font-size: 0.75rem; color: var(--text-muted);">Dùng ngay online</div>
+        </div>
+      </div>
+
+      <button class="btn-pill-primary" id="startDownloadBtn" style="width: 100%; padding: 0.85rem; font-size: 1rem; border-radius: 12px;">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+          <polyline points="7 10 12 15 17 10"/>
+          <line x1="12" y1="15" x2="12" y2="3"/>
+        </svg>
+        Tải MinoIcon cho Windows (.zip Portable)
+      </button>
+
+      <div style="text-align: center; margin-top: 1rem; font-size: 0.785rem; color: var(--text-light);">
+        Gói tải bao gồm file chạy <code>MinoIcon.exe</code> cùng đầy đủ thư viện SharpVectors và Newtonsoft.Json.
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       DONATE MODAL (STK & QR CODE)
+       ========================================================================== -->
+  <div class="modal-overlay" id="donateModal">
+    <div class="modal-card" style="max-width: 440px;">
+      <button class="modal-close-btn" aria-label="Đóng">✕</button>
+      
+      <div style="text-align: center;">
+        <h3 style="font-size: 1.4rem; font-weight: 800; color: var(--text-dark);">Ủng Hộ Tác Giả MinoIcon ☕</h3>
+        <p style="font-size: 0.875rem; color: var(--text-muted); margin-top: 4px;">Đồng hành cùng sự phát triển của phần mềm</p>
+      </div>
+
+      <div class="donate-qr-wrapper">
+        <img src="assets/user_images/donate_qr.png" alt="Mã QR Donate MB Bank" onerror="this.style.display='none'">
+        
+        <div class="donate-bank-info">
+          <div><strong>Ngân hàng:</strong> MB Bank (Quân Đội)</div>
+          <div><strong>Chủ tài khoản:</strong> LE PHAM MINH NHAT</div>
+          <div><strong>Số tài khoản:</strong> <code style="font-weight: 700; color: #2563eb;">5966866868</code></div>
+        </div>
+      </div>
+
+      <button class="btn-pill-primary" id="copyBankBtn" style="width: 100%; padding: 0.75rem; font-size: 0.95rem; border-radius: 12px;">
+        Sao chép số tài khoản (5966866868)
+      </button>
+    </div>
+  </div>
+
+  <!-- Toast Container -->
+  <div class="toast-container"></div>
+
+  <!-- Scripts -->
+  <script src="js/main.js?v=2"></script>
+</body>
+</html>
