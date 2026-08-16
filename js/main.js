@@ -424,8 +424,8 @@ function initDownloadModal() {
       showToast('🎉 Đang tải gói cài đặt MinoIcon Desktop v1.0...');
       
       const link = document.createElement('a');
-      link.href = 'downloads/MinoIcon-Desktop-v1.0.zip';
-      link.download = 'MinoIcon-Desktop-v1.0.zip';
+      link.href = 'https://github.com/minhnhatgithub/MinoIcon/releases/download/MinoIcon/MinoIcon.zip';
+      link.download = 'MinoIcon.zip';
       document.body.appendChild(link);
       link.click();
       document.body.removeChild(link);
